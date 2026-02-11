@@ -1,9 +1,12 @@
+// Load environment variables first
+require("dotenv").config();
+
 const express = require("express");
 const path = require("path");
 const config = require("config");
 
 const app = express();
-const PORT = config.get("port");
+const PORT = process.env.PORT || config.get("port") || 3000;
 
 // Middleware
 app.use(express.json());
@@ -48,10 +51,11 @@ app.get("/", (req, res) => {
 			},
 			listings: "GET /api/listings",
 		},
+		// ⚠️ DEMO ONLY - Remove these test credentials in production!
 		testCredentials: [
-			{ email: "demo@example.com", password: "password123" },
-			{ email: "user@test.com", password: "test123" },
-			{ email: "admin@admin.com", password: "admin123" },
+			{ email: "demo@example.com", password: "demo-password-change-me" },
+			{ email: "user@test.com", password: "test-password-change-me" },
+			{ email: "admin@admin.com", password: "admin-password-change-me" },
 		],
 	});
 });
@@ -62,8 +66,9 @@ app.listen(PORT, () => {
 	console.log(
 		`🔐 Auth endpoints available at: http://localhost:${PORT}/api/auth`,
 	);
-	console.log(`📋 Test credentials:`);
-	console.log(`   - demo@example.com / password123`);
-	console.log(`   - user@test.com / test123`);
-	console.log(`   - admin@admin.com / admin123`);
+	console.log(`📋 Demo credentials (for testing only):`);
+	console.log(`   ⚠️  demo@example.com / demo-password-change-me`);
+	console.log(`   ⚠️  user@test.com / test-password-change-me`);
+	console.log(`   ⚠️  admin@admin.com / admin-password-change-me`);
+	console.log(`   📖 See DEMO_ACCOUNTS.md for details`);
 });

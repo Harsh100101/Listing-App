@@ -9,26 +9,37 @@ const mockUsers = [
 	{
 		id: 1,
 		email: "demo@example.com",
-		password: require('crypto').createHash('sha256').update('demo-password-change-me').digest('hex'),
+		password: require("crypto")
+			.createHash("sha256")
+			.update("demo-password-change-me")
+			.digest("hex"),
 		name: "Demo User",
 	},
 	{
 		id: 2,
-		email: "user@test.com", 
-		password: require('crypto').createHash('sha256').update('test-password-change-me').digest('hex'),
+		email: "user@test.com",
+		password: require("crypto")
+			.createHash("sha256")
+			.update("test-password-change-me")
+			.digest("hex"),
 		name: "Test User",
 	},
 	{
 		id: 3,
 		email: "admin@admin.com",
-		password: require('crypto').createHash('sha256').update('admin-password-change-me').digest('hex'),
+		password: require("crypto")
+			.createHash("sha256")
+			.update("admin-password-change-me")
+			.digest("hex"),
 		name: "Admin User",
 	},
 ];
 
 // JWT secret key - MUST use environment variable in production!
 // ⚠️ SECURITY CRITICAL: Change this in production and use process.env.JWT_SECRET
-const JWT_SECRET = process.env.JWT_SECRET || "insecure-dev-key-change-in-production-" + Date.now();
+const JWT_SECRET =
+	process.env.JWT_SECRET ||
+	"insecure-dev-key-change-in-production-" + Date.now();
 
 // Middleware to parse JSON
 router.use(express.json());
@@ -49,10 +60,14 @@ router.post("/login", async (req, res) => {
 
 	// Find user in mock database
 	// ⚠️ SECURITY: In production, use bcrypt to compare hashed passwords
-	const hashedPassword = require('crypto').createHash('sha256').update(password).digest('hex');
+	const hashedPassword = require("crypto")
+		.createHash("sha256")
+		.update(password)
+		.digest("hex");
 	const user = mockUsers.find(
 		(u) =>
-			u.email.toLowerCase() === email.toLowerCase() && u.password === hashedPassword,
+			u.email.toLowerCase() === email.toLowerCase() &&
+			u.password === hashedPassword,
 	);
 
 	if (!user) {

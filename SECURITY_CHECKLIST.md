@@ -45,6 +45,7 @@
 ### 🔥 **DO IMMEDIATELY:**
 
 1. **Regenerate Firebase Keys:**
+
    ```bash
    # Go to Firebase Console
    # Delete current web app
@@ -53,11 +54,12 @@
    ```
 
 2. **Set Up Environment Variables:**
+
    ```bash
    cd DEMO
    cp .env.example .env
    # Edit .env with your real Firebase keys
-   
+
    cd ../backend
    cp .env.example .env
    # Edit .env with strong JWT secret
@@ -118,6 +120,7 @@
 ## 🔍 **Security Monitoring**
 
 ### **Set Up Monitoring For:**
+
 - Failed authentication attempts
 - Unusual API access patterns
 - Database query anomalies
@@ -128,6 +131,7 @@
 ## 📞 **Need Help?**
 
 If you need assistance with any security implementations:
+
 1. Check the `SECURITY.md` file for detailed instructions
 2. Review the `.env.example` files for configuration options
 3. Consult the demo account documentation

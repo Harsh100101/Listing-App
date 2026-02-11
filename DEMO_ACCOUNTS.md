@@ -7,7 +7,8 @@
 ### Demo Credentials for Testing
 
 **Frontend Demo (for testing UI):**
-- Email: `demo@example.com`  
+
+- Email: `demo@example.com`
 - Password: `demo-password-change-me`
 
 - Email: `user@test.com`
@@ -29,6 +30,7 @@
 ### 🛠️ For Production Use
 
 Replace the mock authentication system with:
+
 - Real database (MongoDB, PostgreSQL, etc.)
 - Proper password hashing algorithms
 - OAuth integration (Google, Apple, etc.)
