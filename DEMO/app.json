@@ -1,0 +1,37 @@
+{
+	"expo": {
+		"name": "DEMO",
+		"slug": "DEMO",
+		"version": "1.0.0",
+		"orientation": "portrait",
+		"icon": "./app/assets/icon.png",
+		"userInterfaceStyle": "light",
+		"newArchEnabled": true,
+		"splash": {
+			"image": "./app/assets/splash-icon.png",
+			"resizeMode": "contain",
+			"backgroundColor": "#ffffff"
+		},
+		"ios": {
+			"supportsTablet": true
+		},
+		"android": {
+			"package": "com.codewithharsh.demo",
+			"versionCode": 1,
+			"softwareKeyboardLayoutMode": "resize",
+			"adaptiveIcon": {
+				"foregroundImage": "./app/assets/adaptive-icon.png",
+				"backgroundColor": "#ffffff"
+			}
+		},
+
+		"web": {
+			"favicon": "./app/assets/favicon.png"
+		},
+		"extra": {
+			"eas": {
+				"projectId": "328d3756-4ed6-4864-aee7-eb388d00429d"
+			}
+		}
+	}
+}

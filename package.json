@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "expo-notifications": "^0.32.16",
+    "expo-permissions": "^14.4.0",
+    "react-native-progress": "^5.0.1"
+  }
+}
