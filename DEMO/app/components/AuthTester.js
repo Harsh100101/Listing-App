@@ -108,7 +108,7 @@ ${results.userDetails ? JSON.stringify(results.userDetails, null, 2) : "No user 
 
 				<TouchableOpacity
 					style={styles.button}
-					onPress={() => testLogin("demo@example.com", "password123")}
+					onPress={() => testLogin("demo@example.com", "demo-password-change-me")}
 					disabled={loading}
 				>
 					<Text style={styles.buttonText}>Test Demo Login</Text>
@@ -116,7 +116,7 @@ ${results.userDetails ? JSON.stringify(results.userDetails, null, 2) : "No user 
 
 				<TouchableOpacity
 					style={styles.button}
-					onPress={() => testLogin("admin@admin.com", "admin123")}
+					onPress={() => testLogin("admin@admin.com", "admin-password-change-me")}
 					disabled={loading}
 				>
 					<Text style={styles.buttonText}>Test Admin Login</Text>
@@ -124,7 +124,7 @@ ${results.userDetails ? JSON.stringify(results.userDetails, null, 2) : "No user 
 
 				<TouchableOpacity
 					style={styles.button}
-					onPress={() => testLogin("user@test.com", "test123")}
+					onPress={() => testLogin("user@test.com", "test-password-change-me")}
 					disabled={loading}
 				>
 					<Text style={styles.buttonText}>Test User Login</Text>

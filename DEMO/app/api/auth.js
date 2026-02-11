@@ -2,24 +2,26 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 import { Buffer } from "buffer";
 import { devLog, devError } from "../utility/devLog";
 
-// Mock users database for offline authentication
+// ⚠️ DEMO ONLY - Replace with real authentication in production
+// These are demo accounts for development/testing purposes ONLY
+// See DEMO_ACCOUNTS.md for current credentials
 const mockUsers = [
 	{
 		id: 1,
 		email: "demo@example.com",
-		password: "password123",
+		password: "demo-password-change-me", // Changed from weak password
 		name: "Demo User",
 	},
 	{
 		id: 2,
 		email: "user@test.com",
-		password: "test123",
+		password: "test-password-change-me", // Changed from weak password
 		name: "Test User",
 	},
 	{
 		id: 3,
 		email: "admin@admin.com",
-		password: "admin123",
+		password: "admin-password-change-me", // Changed from weak password
 		name: "Admin User",
 	},
 ];
