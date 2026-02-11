@@ -1,15 +1,21 @@
 // Firebase Configuration
-// Replace these values with your actual Firebase project credentials
-// Get them from: Firebase Console > Project Settings > General > Your apps
+// ⚠️ IMPORTANT: Never commit real API keys to version control!
+// Create a .env file or use Expo's environment variables
 
 const firebaseConfig = {
-	apiKey: "AIzaSyD6HeRsfNAMse8yiskspfd4U1Jke0qMAB8",
-	authDomain: "fir-fbfae.firebaseapp.com",
-	projectId: "fir-fbfae",
-	storageBucket: "fir-fbfae.firebasestorage.app",
-	messagingSenderId: "84279272797",
-	appId: "1:84279272797:web:dd9683cef2c87c13b574b4",
-	measurementId: "G-1R5MLV91GL",
+	apiKey: process.env.EXPO_PUBLIC_FIREBASE_API_KEY || "your-api-key-here",
+	authDomain:
+		process.env.EXPO_PUBLIC_FIREBASE_AUTH_DOMAIN ||
+		"your-project.firebaseapp.com",
+	projectId: process.env.EXPO_PUBLIC_FIREBASE_PROJECT_ID || "your-project-id",
+	storageBucket:
+		process.env.EXPO_PUBLIC_FIREBASE_STORAGE_BUCKET ||
+		"your-project.firebasestorage.app",
+	messagingSenderId:
+		process.env.EXPO_PUBLIC_FIREBASE_MESSAGING_SENDER_ID || "123456789",
+	appId: process.env.EXPO_PUBLIC_FIREBASE_APP_ID || "your-app-id",
+	measurementId:
+		process.env.EXPO_PUBLIC_FIREBASE_MEASUREMENT_ID || "G-XXXXXXXXXX",
 };
 
 // Export the config for use in services/firebase.js
